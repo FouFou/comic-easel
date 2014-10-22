@@ -62,7 +62,7 @@ function ceo_display_comic_navigation() {
 	$prev_text = __('&lsaquo; Prev','comiceasel');
 	
 	?>
-	<table id="comic-nav-wrapper">
+	<table class="comic-nav-wrapper">
 		<tr class="comic-nav-container">
 			<td class="comic-nav"><?php if ( get_permalink() != $first_comic ) { ?><a href="<?php echo $first_comic ?>" class="comic-nav-base comic-nav-first<?php if ( get_permalink() == $first_comic ) { ?> comic-nav-inactive<?php } ?>"><?php echo $first_text; ?></a><?php } else { echo '<span class="comic-nav-base comic-nav-first comic-nav-void">'.$first_text.'</span>'; } ?></td>
 			<td class="comic-nav"><?php if ($prev_comic) { ?><a href="<?php echo $prev_comic ?>" class="comic-nav-base comic-nav-previous<?php if (!$prev_comic) { ?> comic-nav-inactive<?php } ?>"><?php echo $prev_text; ?></a><?php } else { echo '<span class="comic-nav-base comic-nav-previous comic-nav-void ">'.$prev_text.'</span>'; } ?></td>
